@@ -1,0 +1,49 @@
+codigo_modulo,modulo,tipo,codigo_sensor,latencia_obs,latencia_prev,tensao,corrente,status,prioridade_alerta,mensagem,ciclo
+MOD-EN-001,Geradores + Painéis Solares,energia,101,120.6,119.9,49.31,2.42,manutenção,2,Manutenção preventiva agendada,1
+MOD-SV-002,Sistemas de Suporte à Vida,suporte à vida,102,74.8,76.6,50.28,3.62,ativo,1,Operação normal,1
+MOD-HB-003,Módulos Infláveis BEAM,habitação,103,149.4,153.5,23.69,4.23,ativo,1,Operação normal,1
+MOD-SC-004,Sensores Científicos,laboratório,172,143.3,152.5,11.67,2.85,ativo,1,Operação normal,1
+MOD-MN-005,Mineração e Produção ISRU,mineração,173,193.5,185.6,24.62,2.11,ativo,1,Operação normal,1
+MOD-LG-006,Logística e Suprimentos,logística,174,137.4,136.8,23.27,2.53,ativo,1,Operação normal,1
+MOD-AG-007,Agricultura,agricultura,175,192.9,192.7,12.29,4.38,ativo,1,Operação normal,1
+MOD-CM-008,Comunicação,comunicação,200,110.0,111.8,46.51,1.28,ativo,1,Operação normal,1
+MOD-EN-001,Geradores + Painéis Solares,energia,101,103.2,112.4,47.7,3.88,ativo,1,Operação normal,2
+MOD-SV-002,Sistemas de Suporte à Vida,suporte à vida,102,92.8,94.9,49.46,2.23,ativo,1,Operação normal,2
+MOD-HB-003,Módulos Infláveis BEAM,habitação,103,166.8,167.6,23.28,0.83,ativo,1,Operação normal,2
+MOD-SC-004,Sensores Científicos,laboratório,172,149.5,152.3,12.34,2.5,manutenção,2,Manutenção preventiva agendada,2
+MOD-MN-005,Mineração e Produção ISRU,mineração,173,178.6,187.4,24.4,2.54,ativo,1,Operação normal,2
+MOD-LG-006,Logística e Suprimentos,logística,174,142.4,136.2,24.13,2.87,ativo,1,Operação normal,2
+MOD-AG-007,Agricultura,agricultura,175,294.5,199.4,11.66,2.31,alerta,4,Latência muito acima do previsto,2
+MOD-CM-008,Comunicação,comunicação,200,116.2,118.1,45.88,1.84,ativo,1,Operação normal,2
+MOD-EN-001,Geradores + Painéis Solares,energia,101,150.8,119.7,49.36,3.26,alerta,4,Latência acima do previsto,3
+MOD-SV-002,Sistemas de Suporte à Vida,suporte à vida,102,103.6,101.1,46.4,0.88,ativo,1,Operação normal,3
+MOD-HB-003,Módulos Infláveis BEAM,habitação,103,165.7,164.6,23.19,2.65,ativo,1,Operação normal,3
+MOD-SC-004,Sensores Científicos,laboratório,172,158.1,151.8,11.86,1.92,manutenção,2,Manutenção preventiva agendada,3
+MOD-MN-005,Mineração e Produção ISRU,mineração,173,189.3,183.3,23.08,4.36,ativo,1,Operação normal,3
+MOD-LG-006,Logística e Suprimentos,logística,174,142.6,134.4,25.13,3.68,ativo,1,Operação normal,3
+MOD-AG-007,Agricultura,agricultura,175,209.9,197.9,11.52,4.14,ativo,1,Operação normal,3
+MOD-CM-008,Comunicação,comunicação,200,203.0,121.8,48.38,1.45,alerta,5,Latência muito acima do previsto,3
+MOD-EN-001,Geradores + Painéis Solares,energia,101,128.5,134.7,49.05,2.4,ativo,1,Operação normal,4
+MOD-SV-002,Sistemas de Suporte à Vida,suporte à vida,102,161.9,105.3,46.01,2.34,alerta,5,Latência muito acima do previsto,4
+MOD-HB-003,Módulos Infláveis BEAM,habitação,103,180.1,166.5,23.59,1.33,ativo,1,Operação normal,4
+MOD-SC-004,Sensores Científicos,laboratório,172,152.2,163.0,12.51,2.95,manutenção,2,Manutenção preventiva agendada,4
+MOD-MN-005,Mineração e Produção ISRU,mineração,173,198.2,199.6,25.1,2.58,ativo,1,Operação normal,4
+MOD-LG-006,Logística e Suprimentos,logística,174,134.7,132.1,23.98,4.27,ativo,1,Operação normal,4
+MOD-AG-007,Agricultura,agricultura,175,207.5,210.6,11.8,2.73,ativo,1,Operação normal,4
+MOD-CM-008,Comunicação,comunicação,200,119.9,119.4,49.9,1.32,ativo,1,Operação normal,4
+MOD-EN-001,Geradores + Painéis Solares,energia,101,137.8,127.7,46.95,3.24,manutenção,2,Manutenção preventiva agendada,5
+MOD-SV-002,Sistemas de Suporte à Vida,suporte à vida,102,101.8,104.7,50.0,1.65,ativo,1,Operação normal,5
+MOD-HB-003,Módulos Infláveis BEAM,habitação,103,160.5,169.6,24.79,3.79,ativo,1,Operação normal,5
+MOD-SC-004,Sensores Científicos,laboratório,172,162.9,168.6,12.02,1.75,manutenção,2,Manutenção preventiva agendada,5
+MOD-MN-005,Mineração e Produção ISRU,mineração,173,273.1,200.3,23.84,4.47,alerta,4,Latência muito acima do previsto,5
+MOD-LG-006,Logística e Suprimentos,logística,174,146.3,149.8,24.94,4.11,ativo,1,Operação normal,5
+MOD-AG-007,Agricultura,agricultura,175,218.6,222.2,12.19,2.18,ativo,1,Operação normal,5
+MOD-CM-008,Comunicação,comunicação,200,205.8,134.2,50.1,1.69,alerta,5,Latência muito acima do previsto,5
+MOD-EN-001,Geradores + Painéis Solares,energia,101,152.6,139.4,46.34,1.46,ativo,1,Operação normal,6
+MOD-SV-002,Sistemas de Suporte à Vida,suporte à vida,102,91.4,90.8,49.33,4.4,manutenção,2,Manutenção preventiva agendada,6
+MOD-HB-003,Módulos Infláveis BEAM,habitação,103,247.5,171.3,23.35,1.29,alerta,5,Latência muito acima do previsto,6
+MOD-SC-004,Sensores Científicos,laboratório,172,160.6,164.4,12.01,3.37,ativo,1,Operação normal,6
+MOD-MN-005,Mineração e Produção ISRU,mineração,173,201.2,199.1,24.52,3.53,ativo,1,Operação normal,6
+MOD-LG-006,Logística e Suprimentos,logística,174,160.3,151.7,23.97,3.25,ativo,1,Operação normal,6
+MOD-AG-007,Agricultura,agricultura,175,220.2,214.8,11.43,2.85,ativo,1,Operação normal,6
+MOD-CM-008,Comunicação,comunicação,200,124.0,109.3,47.61,4.38,alerta,4,Latência acima do previsto,6
