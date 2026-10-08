@@ -22,10 +22,12 @@ O SCIC é a camada de avaliação, organização e interpretação técnica dos 
 
 ## Equipe
 
-| Integrante | RM |
-|------------|-----|
+| Nome | RM |
+|---|---|
 | Isabelle Caroline de Camargo Francisco | 572096 |
+| Matheus Lyncoln Souza Dias | 570765 |
 | Mirela Aparecida Bispo Miguel | 570830 |
+| Rodrigo Abrantes Mizerani | 571808 |
 
 ---
 
