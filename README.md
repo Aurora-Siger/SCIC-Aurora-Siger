@@ -93,13 +93,11 @@ Ao carregar a base, o sistema faz uma limpeza automática: padroniza textos, con
 |-------|-----------|---------|--------|
 | 1 | Resumo da base e consultas por módulo, status e tipo | `dados.py` | ✅ Pronto |
 | 2 | Erro absoluto e relativo, indicadores, erros por módulo, ponto flutuante e gráfico | `analise.py` | ✅ Pronto |
-| 3 | Regressão linear para prever a latência, com MAE, MSE, RMSE e R² | `modelo.py` | 🚧 Em desenvolvimento |
-| 4 | Priorização dos alertas mais críticos com heap | `estruturas.py` | 🚧 Em desenvolvimento |
-| 5 | Busca de módulos e códigos por prefixo com trie | `estruturas.py` | 🚧 Em desenvolvimento |
+| 3 | Regressão linear para prever a latência, com MAE, MSE, RMSE e R² | `modelo.py` | ✅ Pronto |
+| 4 | Priorização dos alertas mais críticos com heap | `estruturas.py` | ✅ Pronto |
+| 5 | Busca de módulos, nomes e códigos de sensores por prefixo com trie | `estruturas.py` | ✅ Pronto |
 | 6 | Código do sensor em binário e hexadecimal, potência (P = V × I) e resistência (R = V / I) | `hardware.py` | ✅ Pronto |
-| 7 | Análise final: situação geral, módulo mais preocupante, tendência e recomendações | `analise.py` | ✅ Pronto |
-
-As opções em desenvolvimento mostram um aviso no menu em vez de interromper o sistema.
+| 7 | Análise final: situação geral, módulo mais preocupante, tendência, modelo, alertas prioritários e recomendações | `analise.py` | ✅ Pronto |
 
 ---
 
@@ -141,6 +139,47 @@ O módulo de **Comunicação (MOD-CM-008)** é o único com erro relativo médio
 
 ---
 
+## Modelo de previsão
+
+Uma **regressão linear** (scikit-learn) prevê a latência de cada módulo a partir da **potência** do transmissor (P = V × I), do **ciclo** e do **tipo** do módulo. O modelo é treinado só com os registros normais, para aprender o comportamento esperado da colônia. Divisão: 75% treino (30 registros) e 25% teste (10 registros).
+
+| Previsão | MAE | MSE | RMSE | R² |
+|----------|-----|-----|------|----|
+| Nosso modelo | 5,1 ms | 35,0 | 5,9 ms | 0,97 |
+| Chute pela média (baseline) | 41,3 ms | 2127,0 | 46,1 ms | −0,56 |
+| Previsão original da base | 4,0 ms | 25,8 | 5,1 ms | 0,98 |
+
+- O modelo erra 8 vezes menos que o chute pela média: aprendeu um padrão real.
+- R² de 0,97 **não** significa modelo perfeito: são só 10 registros de teste, com dados simulados.
+- RMSE maior que o MAE indica que alguns erros são maiores que a média.
+- Cada ciclo deixa a rede 4,25 ms mais lenta, e cada 1 W de potência reduz a latência em 0,19 ms.
+
+**Detector de anomalias:** nos registros normais o erro médio é de 5,1 ms; nos 8 registros em alerta, que o modelo nunca viu, sobe para 62,9 ms. Quando a latência real se afasta muito do esperado, o SCIC tem um sinal objetivo de comportamento anormal.
+
+![Latência real x prevista](graficos_ou_imagens/latencia_real_x_prevista.png)
+
+---
+
+## Heap e trie
+
+**Heap (opção 4):** max-heap implementado à mão (sem `heapq`), com `heapify_up` e `heapify_down`. A prioridade de cada alerta é `prioridade_alerta × 10`, +5 se a latência ficou acima da prevista e +5 se o módulo for de comunicação ou suporte à vida. O alerta mais urgente fica sempre na raiz; inserir e remover custam O(log n), contra O(n) para achar o mais urgente numa lista comum.
+
+| Ordem | Módulo | Ciclo | Prioridade |
+|-------|--------|-------|------------|
+| 1º | MOD-CM-008 Comunicação | 3 | 60 |
+| 2º | MOD-SV-002 Sistemas de Suporte à Vida | 4 | 60 |
+| 3º | MOD-CM-008 Comunicação | 5 | 60 |
+
+**Trie (opção 5):** guarda os códigos dos módulos, os nomes e os códigos dos sensores (24 palavras). A busca percorre só as letras do prefixo, em O(m).
+
+| Prefixo | Resultado |
+|---------|-----------|
+| `mod-s` | MOD-SC-004, MOD-SV-002 |
+| `com` | Comunicação (MOD-CM-008) |
+| `17` | Sensores 172, 173, 174 e 175 |
+
+---
+
 ## Estrutura de arquivos
 
 ```
@@ -157,10 +196,11 @@ SCIC-Aurora-Siger
 ├── link_video.txt           # link do vídeo (YouTube · Não listado)
 ├── .gitignore               # arquivos temporários ignorados pelo Git
 └── graficos_ou_imagens/
-    └── erro_relativo_por_modulo.png
+    ├── erro_relativo_por_modulo.png
+    └── latencia_real_x_prevista.png
 ```
 
-> Todos os arquivos `.py` e o CSV devem ficar na mesma pasta. Os gráficos são gerados automaticamente em `graficos_ou_imagens/` ao executar a opção 2.
+> Todos os arquivos `.py` e o CSV devem ficar na mesma pasta. Os gráficos são gerados automaticamente em `graficos_ou_imagens/` ao executar as opções 2 e 3.
 
 ---
 
