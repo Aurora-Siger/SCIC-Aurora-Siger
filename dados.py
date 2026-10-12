@@ -1,13 +1,3 @@
-"""
-dados.py - Leitura, limpeza e consulta da base da Aurora Siger   [Isabelle]
-
-Este arquivo cuida da base de dados do SCIC:
-- carregar_dados: lê o CSV com Pandas e faz a limpeza básica
-- resumo_base: mostra um panorama geral da colônia
-- consultar_modulo / filtrar_por_status / filtrar_por_tipo: consultas simples
-- menu_consultas: opção 1 do menu principal
-"""
-
 import os
 import pandas as pd
 
