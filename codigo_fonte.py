@@ -5,12 +5,6 @@
 ============================================================================
  Arquivo principal do sistema: execute este arquivo.
  Ele exibe o menu no terminal e chama as funcoes dos demais modulos:
-
-   dados.py       -> leitura e consulta da base (Pandas)          [Isabelle]
-   analise.py     -> indicadores, erro absoluto e relativo         [Isabelle]
-   modelo.py      -> regressao linear e metricas (scikit-learn)    [Isabelle]
-   estruturas.py  -> heap (alertas) e trie (busca por prefixo)     [Mirela]
-   hardware.py    -> bases numericas, potencia e Lei de Ohm        [Mirela]
 ============================================================================
 """
 
