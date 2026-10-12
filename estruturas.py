@@ -1,9 +1,3 @@
-"""
-estruturas.py - Heap para priorizar alertas e Trie para busca por prefixo   [Mirela]
-Apenas Python puro (sem heapq).
-"""
-
-
 # ===========================================================================
 # 1. HEAP (fila de prioridade de alertas)
 # ===========================================================================
