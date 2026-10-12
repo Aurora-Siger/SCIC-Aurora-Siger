@@ -1,16 +1,5 @@
-"""
-hardware.py - SCIC (Fase 6)
-
-Este arquivo tem 3 funções que trabalham com os dados dos sensores:
-- converter_bases: mostra o código do sensor em binário e hexadecimal
-- calcular_potencia: calcula a potência (P = V x I)
-- calcular_resistencia: calcula a resistência (R = V / I)
-
-Só usei Python puro (módulos csv e os, que já vêm com o Python).
-"""
-
-import csv  # para ler o arquivo CSV
-import os   # para achar a pasta onde o arquivo está
+import csv
+import os
 
 
 def converter_bases(codigo):
@@ -93,9 +82,6 @@ def menu_hardware(df):
             print("Código inválido: digite apenas números.")
 
 
-# ---------------------------------------------------------------
-# Exemplo: lê as primeiras linhas do CSV e mostra os resultados
-# ---------------------------------------------------------------
 # Esse if faz o exemplo rodar só quando eu executo este arquivo direto.
 # Se outro arquivo importar as funções, o exemplo não roda sozinho.
 if __name__ == "__main__":
