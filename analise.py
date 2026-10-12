@@ -1,16 +1,3 @@
-"""
-analise.py - Indicadores de comunicação e erros numéricos   [Isabelle]
-
-Este arquivo cuida da análise numérica do SCIC (seção 5.2 do enunciado):
-- calcular_erros: erro absoluto e relativo entre latência prevista e observada
-- classificar_erro: diz se o erro é aceitável, de atenção ou crítico
-- calcular_indicadores: indicadores gerais de comunicação da colônia
-- erros_por_modulo: compara módulos com escalas diferentes de latência
-- demonstrar_ponto_flutuante: mostra diferenças causadas por arredondamento
-- gerar_grafico_erros: salva o gráfico em graficos_ou_imagens/
-- menu_analise / analise_final: opções 2 e 7 do menu principal
-"""
-
 import math
 import os
 
