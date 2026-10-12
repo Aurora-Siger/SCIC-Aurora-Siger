@@ -1,17 +1,3 @@
-"""
-modelo.py - Regressao linear para prever latencia e metricas   [Isabelle]
-
-Este arquivo cuida do modelo de previsão do SCIC (seção 5.3 do enunciado):
-- preparar_dados: cria a coluna de potência (P = V x I)
-- separar_x_y: separa o que o modelo usa (X) do que ele prevê (y)
-- treinar_modelo: divide em treino e teste e treina a regressão linear
-- calcular_metricas: MAE, MSE, RMSE e R²
-- avaliar_modelo: compara o modelo com um chute pela média e com a
-  previsão original da base, e testa o modelo nos registros em alerta
-- gerar_grafico_previsao: salva o gráfico em graficos_ou_imagens/
-- menu_modelo: opção 3 do menu principal
-"""
-
 import os
 import numpy as np
 import pandas as pd
