@@ -4,7 +4,7 @@
  Colonia Aurora Siger  |  Fase 6 - "Comunicacao interplanetaria"
 ============================================================================
  Arquivo principal do sistema: execute este arquivo.
- Ele exibe o menu no terminal e chama as funcoes dos demais modulos:
+ Ele exibe o menu no terminal e chama as funcoes dos modulos.
 ============================================================================
 """
 
